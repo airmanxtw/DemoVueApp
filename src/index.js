@@ -7,6 +7,11 @@ import example1 from "component/example1";
 //setprototype();
 
 new Vue({
+  render(){
+    return (
+      <example1></example1>
+    );
+  },
   components: {
     example1
   }
