@@ -20,9 +20,20 @@
       </td>
       <td>{{totalcounter()}}</td>
     </tr>
+    <tr>
+      <td colspan="2">
+        <facebook-login class="button"
+          appId="1173502953133237"
+          @login="getUserData"
+          @logout="onLogout"
+          @get-initial-status="getUserData">
+        </facebook-login>
+      </td>
+    </tr>
   </table>
 </template>
 <script>
+import facebookLogin from 'facebook-login-vuejs';
 export default {
   data() {
     return {
@@ -55,7 +66,20 @@ export default {
           total += that.rowcounter(stud);
         })
         return total;
+      },
+      getUserData(r){
+        debugger;
+      },
+      onLogout(r){
+        debugger;
+      },
+      getUserData(r){
+        debugger;
       }
+
   },
+  components:{
+    facebookLogin
+  }
 };
 </script>
