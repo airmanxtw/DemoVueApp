@@ -4,5 +4,6 @@
         "root": ["./src"],
         "extensions": [".vue",".js"]          
       }]
-    ]
+    ],
+    "presets": ["@vue/babel-preset-jsx"]
   }
