@@ -26,7 +26,8 @@
           appId="1173502953133237"
           @login="getUserData"
           @logout="onLogout"
-          @get-initial-status="getUserData">
+          @get-initial-status="getUserData"
+           >
         </facebook-login>
       </td>
     </tr>
@@ -68,14 +69,14 @@ export default {
         return total;
       },
       getUserData(r){
+        FB.api("/me?fields=name,id,email", function(res){
+          debugger;
+        })
         debugger;
       },
       onLogout(r){
         debugger;
-      },
-      getUserData(r){
-        debugger;
-      }
+      }     
 
   },
   components:{
