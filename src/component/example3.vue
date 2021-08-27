@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vue-editor v-model="content"></vue-editor>
+    <vue-editor v-model="content" :editor-toolbar="customToolbar"></vue-editor>
     <textarea v-model="content" style="width: 900px" rows="80"></textarea>
   </div>
 </template>
@@ -11,6 +11,9 @@ export default {
   data() {
     return {
       content: "<h1>test</h1>",
+      customToolbar: [
+        [{ font: ["新細明體"] }, { size: ["small", false, "large", "huge"] }],
+      ],
     };
   },
   components: {
