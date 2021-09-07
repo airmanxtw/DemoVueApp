@@ -6,11 +6,19 @@ const axios = require("axios");
 export default {
   methods: {
     go() {
-      axios
+     /*  axios
         .post("https://portal.stust.edu.tw/exteduapi/auth", {
           userid: "airmanx",
           password: "a6005600",
         })
+        .then((res) => {
+          debugger;
+        })
+        .catch((err) => {
+          debugger;
+        }); */
+        axios
+        .get("https://localhost:5001/data/category")
         .then((res) => {
           debugger;
         })
